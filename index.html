@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santhosh Kumar S | Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Santhosh Kumar S — Full-Stack Developer specializing in the PERN stack (PostgreSQL, Express, React, Node.js). Building fast, secure, production-ready web applications."
+    />
+    <meta name="theme-color" content="#0B0C0E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Santhosh Kumar" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+  </head>
+  <body class="bg-bg dark:bg-bg-dark">
+    <script>
+      // Determine initial theme before React mounts, to avoid a flash of the wrong theme.
+      // Priority: saved preference > system preference > dark fallback.
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("theme");
+          var theme;
+          if (stored === "dark" || stored === "light") {
+            theme = stored;
+          } else {
+            var prefersLight =
+              window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: light)").matches;
+            theme = prefersLight ? "light" : "dark";
+          }
+          window.__initialTheme = theme;
+          if (theme === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {
+          window.__initialTheme = "dark";
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
