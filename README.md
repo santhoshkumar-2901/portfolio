@@ -110,7 +110,7 @@ npm run preview
 
 **Email**
 
-santhoshkumars2901.com
+santhoshkumars2901@gmail.com
 
 **LinkedIn**
 
