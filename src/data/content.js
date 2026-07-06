@@ -7,7 +7,7 @@ export const profile = {
   email: 'santhoshkumars2901@gmail.com',
   linkedin: 'https://linkedin.com/in/s-santhosh-kumar-dev',
   github: 'https://github.com/santhoshkumar-2901',
-  resumeUrl: '/Santhosh-Kumar-S-Resume.pdf'
+  resumeUrl: "/Santhosh Kumar's Resume.pdf"
 }
 
 export const skills = [
